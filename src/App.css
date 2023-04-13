@@ -1,0 +1,149 @@
+header {
+  background-color: gainsboro;
+  height: 80px;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+h2 {
+  font-size: calc(0.2vw + 1rem);
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem auto;
+  max-width: 1248px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem;
+  max-width: 300px;
+  margin: 0 auto;
+
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+  border-radius: 4px;
+}
+
+h2 p::first-letter {
+  text-transform: uppercase;
+}
+
+.post:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in;
+}
+
+.btn-details {
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 1rem;
+
+  background-color: #b2d4db;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 1px 2px 0px 1px #000;
+  border-radius: 4px;
+}
+
+.btn-details:hover {
+  background-color: #8fc1cb;
+  color: #000;
+  box-shadow: 3px 4px 0px 1px #000;
+  transform: translateY(-2px);
+}
+.btn-details:active {
+  transform: translateY(-1px);
+}
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  z-index: -1;
+}
+.show-modal {
+  transition: all 0.2s ease-in-out;
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  position: relative;
+  background: white;
+  border-radius: 4px;
+  height: auto;
+  width: 70vw;
+  max-width: 876px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.modal-header {
+  width: 100%;
+  padding-block: 0.5em;
+  border-bottom: 1.5px solid #ddd;
+}
+.btn-close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: unset;
+  font-size: 1.5rem;
+}
+
+.btn-close-modal:hover {
+  color: #f45050;
+  transform: translateY(-2px);
+}
+.btn-close-modal:active {
+  transform: translateY(-1px);
+}
+
+.modal-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-title {
+  color: #333;
+}
+
+li {
+  display: flex;
+  margin-block: 1rem;
+}
+
+li span {
+  margin-right: 1rem;
+  margin-top: 2px;
+  color: #577d86;
+  font-weight: 700;
+}
